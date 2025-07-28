@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - docker build -t node-app:latest .
-      - docker tag ${docker_user} ${docker_user}/node-app:latest
+      - docker tag node-app:latest ${docker_user}/node-app:latest
 
   post_build:
     commands:
