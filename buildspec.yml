@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  docker-login:
+    commands:
+      - docker --version
+      - echo "${docker_passwd}" | docker login -u "${docker_user}" --password-stdin
+
+  build-app:
+    commands:
+      - docker build -t node-app:latest
+      - docker tag ${docker_user} ${docker_user}/node-app:latest
+
+  push-app:
+    commands:
+      - docker push ${docker_user}/node-app:latest
