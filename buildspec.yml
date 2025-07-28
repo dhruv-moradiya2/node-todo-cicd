@@ -4,6 +4,7 @@ phases:
   pre_build:
     commands:
       - docker --version
+      - node -v
       - echo "docker login"
       - echo "${docker_passwd}" | docker login -u "${docker_user}" --password-stdin
 
