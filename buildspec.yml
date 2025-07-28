@@ -6,11 +6,11 @@ phases:
       - docker --version
       - echo "${docker_passwd}" | docker login -u "${docker_user}" --password-stdin
 
-  build_app:
+  build:
     commands:
       - docker build -t node-app:latest .
       - docker tag ${docker_user} ${docker_user}/node-app:latest
 
-  push_app:
+  post_build:
     commands:
       - docker push ${docker_user}/node-app:latest
