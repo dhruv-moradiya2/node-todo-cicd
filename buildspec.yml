@@ -1,7 +1,7 @@
 version: 0.2
 
 phases:
-  docker_login:
+  pre_build:
     commands:
       - docker --version
       - echo "${docker_passwd}" | docker login -u "${docker_user}" --password-stdin
