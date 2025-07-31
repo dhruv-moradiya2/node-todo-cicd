@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pwd
+
 echo "docker compose start"
 
 docker compose up -d --build
