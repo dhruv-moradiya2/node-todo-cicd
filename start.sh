@@ -1,6 +1,7 @@
 #!/bin/bash
 
-pwd
+
+docker pull hello-world:latest
 
 git clone https://github.com/dhruv-moradiya2/node-todo-cicd.git
 
