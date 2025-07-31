@@ -4,6 +4,6 @@ echo "docker compose start"
 
 docker compose up -d --build
 
-echo "list out the continer"
+echo "list out the container"
 
 docker ps -a

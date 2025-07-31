@@ -1,18 +1,18 @@
 version: 0.0
 os: linux
 
-files:
-  - source: /
-    destination: /home/ubuntu/node-todo-cicd
+# files:
+#   - source: /
+#     destination: /home/ubuntu/node-todo-cicd
 
 # deploy on ec2 
 hooks:
-  BeforeInstall:
+  ApplicationStop:
     - location: stop.sh
       timeout: 300
       runas: root
 
-  AfterInstall:
+  ApplicationStart:
     - location: start.sh
       timeout: 300
       runas: root    

@@ -3,13 +3,13 @@
 echo "docker container down"
 sudo docker compose down
 
-if [ $(docker ps -aq | wc -l) == "0" ];
+if [ $(docker ps -aq | wc -l) == 0 ];
 then
     echo "all container is down"
 
-elif [ $(docker ps -aq | wc -l) != "0" ];
+elif [ $(docker ps -aq | wc -l) != 0 ];
 then
-    echo "down all container focrefully"
+    echo "down all container forcefully"
     sudo docker rm -f $(docker ps -aq)
     
 else
