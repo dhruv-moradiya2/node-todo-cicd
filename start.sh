@@ -2,6 +2,10 @@
 
 pwd
 
+git clone https://github.com/dhruv-moradiya2/node-todo-cicd.git
+
+cd node-todo-cicd
+
 echo "docker compose start"
 
 docker compose up -d --build
