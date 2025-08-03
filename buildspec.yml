@@ -2,8 +2,8 @@ version: 0.2
 # store value in system manager
 env:
   variables:
-    DOCKER_USER: /myapp/docker-credentials/username
-    DOCKER_PASSWD: /myapp/docker-credentials/password
+    DOCKER_USER: /dockerhub/username
+    DOCKER_PASSWD: /dockerhub/username
     
 
 phases:
