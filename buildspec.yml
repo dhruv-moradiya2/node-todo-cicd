@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     DOCKER_USER: /dockerhub/username
-    DOCKER_PASSWD: /dockerhub/username
+    DOCKER_PASSWD: /dockerhub/password
     
 
 phases:
