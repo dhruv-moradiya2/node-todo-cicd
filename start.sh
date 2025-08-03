@@ -1,16 +1,16 @@
 #!/bin/bash
 
+echo "Starting Node Todo Application"
 
-docker pull hello-world:latest
-
-git clone https://github.com/dhruv-moradiya2/node-todo-cicd.git
-
-cd node-todo-cicd
+# Navigate to the application directory where CodeDeploy copied the files
+cd /home/ec2-user/node-todo-cicd
 
 echo "docker compose start"
 
-docker compose up -d --build
+docker-compose up -d --build
 
 echo "list out the container"
 
 docker ps -a
+
+echo "Application started successfully"
